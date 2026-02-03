@@ -227,9 +227,19 @@ const photos = [
   let p = 0;
 
 function renderPhoto(){
-  $("photo").src = photos[p].src;
-  $("caption").textContent = photos[p].cap;
-  console.log("PHOTO LOADED:", photos[p].src);
+  const img = $("photo");
+  const cap = $("caption");
+  if (!img || !cap) return;
+
+  // force correct sizing
+  img.style.width = "100%";
+  img.style.height = "420px";        // you can tweak later
+  img.style.objectFit = "contain";   // stops zooming
+  img.style.objectPosition = "center";
+  img.style.background = "rgba(0,0,0,0.25)";
+
+  img.src = photos[p].src;
+  cap.textContent = photos[p].cap;
 }
 
 
