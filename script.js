@@ -232,8 +232,6 @@ function renderPhoto(){
   if (!img || !cap) return;
 
   // force correct sizing
-  img.style.width = "100%";
-  img.style.height = "100%";        // you can tweak later
   img.style.objectFit = "contain";   // stops zooming
   img.style.objectPosition = "center";
   img.style.background = "rgba(0,0,0,0.25)";
