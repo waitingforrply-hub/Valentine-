@@ -19,9 +19,10 @@ async function typeLines(lines){
   terminal.innerHTML = "";
   for (const line of lines){
     terminal.innerHTML += `> ${line}<br>`;
-    if (!skipped) await sleep(650);
+    if (!skipped) await sleep(2200);
   }
 }
+
 
 // ---------- Stage 1: Welcome ----------
 const introLines = [
