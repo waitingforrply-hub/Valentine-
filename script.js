@@ -92,6 +92,7 @@ function renderQuestion(){
       score += item.points[i];
       idx++;
       if (idx >= quiz.length){
+        burstConfetti(); // 🎉 confetti on results
 
   // Cute "AI verdict" based on score
   let verdictTitle = "✅ Compatibility Verified";
