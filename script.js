@@ -27,8 +27,8 @@ async function typeLines(lines){
 // ---------- Stage 1: Welcome ----------
 const introLines = [
   "Booting Quirky LoveOS…",
-  "Scanning: BooBoo detected 💖",
-  "Loading: my love for you..%",
+  "Scanning: Boo detected 💖",
+  "Loading: my love for you..",
   "Calibrating: the butterflies in my stomach…",
   "Are you ready for me to steal your heart? 😌"
 ];
