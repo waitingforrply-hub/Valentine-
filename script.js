@@ -114,8 +114,29 @@ function renderQuestion(){
 
   $("qText").textContent = `Love Score: ${score}/20  •  Status: Approved ✅`;
   answers.innerHTML = `
-    <button class="answer" id="revealBtn">Reveal your reward 🎁</button>
-    <button class="answer" id="bonusBtn">Bonus question 😏</button>
+  <div class="cert">
+    <div class="certTop">
+      <div class="certBadge">💘 Love Certificate</div>
+      <div class="certId">ID: BB-${Math.floor(1000 + Math.random() * 9000)}</div>
+    </div>
+
+    <div class="certMain">
+      <div class="certLine"><span>Issued To:</span> BooBoo</div>
+      <div class="certLine"><span>Issued By:</span> Your favourite human 😌</div>
+      <div class="certLine"><span>Compatibility:</span> ${score}/20 (Certified ✅)</div>
+      <div class="certLine"><span>Valid Until:</span> Forever ♾️</div>
+    </div>
+
+    <div class="certFooter">
+      <div class="stamp">APPROVED</div>
+      <div class="smallNote">Redeemable for hugs, dates, and unlimited “come here” moments.</div>
+    </div>
+  </div>
+
+  <button class="answer" id="revealBtn">Reveal your reward 🎁</button>
+  <button class="answer" id="bonusBtn">Bonus question 😏</button>
+`;
+
   `;
 
   // Make Next button available
