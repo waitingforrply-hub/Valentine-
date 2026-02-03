@@ -28,9 +28,9 @@ async function typeLines(lines){
 const introLines = [
   "Booting Quirky LoveOS…",
   "Scanning: BooBoo detected 💖",
-  "Loading: reasons I smile when I think of you… 99%",
-  "Calibrating: butterflies in my stomach…",
-  "Ready to steal your heart 😌"
+  "Loading: my love for you..%",
+  "Calibrating: the butterflies in my stomach…",
+  "Are you ready for me to steal your heart? 😌"
 ];
 
 
@@ -48,21 +48,32 @@ $("backToWelcomeBtn").addEventListener("click", () => show("stage-welcome"));
 // ---------- Stage 2: Quiz ----------
 const quiz = [
   {
-    q: "Choose our vibe:",
-    a: ["Cute & calm", "Chaotic but adorable", "Rom-com main characters"],
-    points: [1, 2, 3]
+    q: "First things first… what are we?",
+    a: ["Just vibing 😌", "A problem (for everyone else) 😈", "Power couple 👩‍❤️‍👨"],
+    points: [1, 3, 5]
   },
   {
-    q: "Pick a date plan:",
-    a: ["Coffee + walk", "Food + movie", "Dinner + something unexpected"],
-    points: [1, 2, 3]
+    q: "Pick our perfect date:",
+    a: ["Food + yap yap yap 🍜", "Movie + snacks + cuddles 🍿", "Surprise plan 😏"],
+    points: [2, 3, 4]
   },
   {
-    q: "Important question: who’s the cutest?",
-    a: ["Me 😌", "You 😳", "Us 😏"],
+    q: "Which one is my weakness?",
+    a: ["You 😇", "Neck kissess 💋", "Your charm 🥰"],
     points: [2, 3, 5]
+  },
+  {
+    q: "Important security question:",
+    a: ["Do you like me?", "Do you REALLY like me?", "Okay fine I love you 😤💖"],
+    points: [1, 2, 6]
+  },
+  {
+    q: "Final quiz question (no pressure):",
+    a: ["I choose you over everything", "I choose you over everything", "I choose you over everything"],
+    points: [3, 5, 7]
   }
 ];
+
 
 let idx = 0;
 let score = 0;
