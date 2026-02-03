@@ -91,7 +91,27 @@
     </section>
   </main>
 
-  <script src="script.js?v=12"></script>
+<script>
+  // Shows JS errors directly on the page (so we can fix fast)
+  window.onerror = function (msg, src, line, col) {
+    const box = document.createElement("div");
+    box.style.cssText =
+      "position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;" +
+      "background:#ff3b3b;color:#111;padding:12px;border-radius:12px;" +
+      "font:12px ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;";
+    box.textContent = "JS ERROR:\n" + msg + "\n" + (src || "") + "\nLine: " + line + " Col: " + col;
+    document.body.appendChild(box);
+  };
+
+  // Proves JavaScript is running on this page
+  document.addEventListener("DOMContentLoaded", () => {
+    const t = document.getElementById("terminal");
+    if (t) t.innerHTML = "> JS is running... loading main script now ✅<br>";
+  });
+</script>
+
+<script src="script.js?v=999"></script>
+
 
 </body>
 </html>
