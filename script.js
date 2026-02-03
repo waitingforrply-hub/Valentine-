@@ -19,7 +19,7 @@ async function typeLines(lines){
   terminal.innerHTML = "";
   for (const line of lines){
     terminal.innerHTML += `> ${line}<br>`;
-    if (!skipped) await sleep(2200);
+    if (!skipped) await sleep(3200);
   }
 }
 
