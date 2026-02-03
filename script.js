@@ -92,13 +92,53 @@ function renderQuestion(){
       score += item.points[i];
       idx++;
       if (idx >= quiz.length){
-        $("quizPrompt").textContent = `Result: 100% compatible. (Score: ${score})`;
-        $("toPhotosBtn").disabled = false;
-        $("qText").textContent = "You passed. Obviously.";
-        answers.innerHTML = "";
-      } else {
-        renderQuestion();
-      }
+
+  // Cute "AI verdict" based on score
+  let verdictTitle = "✅ Compatibility Verified";
+  let verdictBody  = "Official diagnosis: you + me = dangerous levels of cute.";
+
+  if (score >= 16){
+    verdictTitle = "💍 EXTREME COMPATIBILITY";
+    verdictBody  = "Warning: this relationship may cause addiction, smiling, and permanent butterflies.";
+  } else if (score >= 12){
+    verdictTitle = "💘 HIGH COMPATIBILITY";
+    verdictBody  = "Side effects include: random blushes, missing each other, and uncontrollable ‘aww’ moments.";
+  } else {
+    verdictTitle = "😌 COMPATIBLE ENOUGH";
+    verdictBody  = "The AI says: not perfect… but perfect for me. (That’s the only metric that matters.)";
+  }
+
+  $("quizTitle").textContent = verdictTitle;
+  $("quizPrompt").textContent = verdictBody;
+
+  $("qText").textContent = `Love Score: ${score}/20  •  Status: Approved ✅`;
+  answers.innerHTML = `
+    <button class="answer" id="revealBtn">Reveal your reward 🎁</button>
+    <button class="answer" id="bonusBtn">Bonus question 😏</button>
+  `;
+
+  // Make Next button available
+  $("toPhotosBtn").disabled = false;
+  $("toPhotosBtn").textContent = "Next: memories 📸";
+
+  // Button actions
+  setTimeout(() => {
+    const revealBtn = document.getElementById("revealBtn");
+    const bonusBtn = document.getElementById("bonusBtn");
+
+    if (revealBtn) revealBtn.onclick = () => {
+      $("quizPrompt").textContent = "Reward unlocked: unlimited hugs + one date night (redeemable immediately). 🫶";
+    };
+
+    if (bonusBtn) bonusBtn.onclick = () => {
+      $("quizPrompt").textContent = "Bonus answer accepted. Now proceed to the photo evidence. 📸😌";
+    };
+  }, 0);
+
+} else {
+  renderQuestion();
+}
+
     });
     answers.appendChild(b);
   });
