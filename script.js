@@ -241,8 +241,9 @@ function renderPhoto(){
     });
   }
 
-  if (prevPhoto) prevPhoto.addEventListener("click", () => { p = (p - 1 + photos.length) % photos.length; renderPhoto(); });
-  if (nextPhoto) nextPhoto.addEventListener("click", () => { p = (p + 1) % photos.length; renderPhoto(); });
+ if (prevPhoto) prevPhoto.addEventListener("click", () => (p = (p - 1 + photos.length) % photos.length, renderPhoto()));
+if (nextPhoto) nextPhoto.addEventListener("click", () => (p = (p + 1) % photos.length, renderPhoto()));
+
 
   if (backToQuizBtn) backToQuizBtn.addEventListener("click", () => show("stage-quiz"));
   if (toFinalBtn) toFinalBtn.addEventListener("click", () => show("stage-final"));
