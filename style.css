@@ -189,3 +189,77 @@ button{
   color: rgba(255,255,255,0.55);
   text-align:center;
 }
+.cert{
+  margin: 10px 0 12px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+}
+
+.certTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.certBadge{
+  display:inline-flex;
+  padding:6px 10px;
+  border-radius:999px;
+  background: rgba(255,77,139,0.18);
+  border: 1px solid rgba(255,77,139,0.35);
+  font-size:12px;
+  font-weight:800;
+}
+
+.certId{
+  font-size:12px;
+  color: rgba(255,255,255,0.65);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.certMain{
+  display:grid;
+  gap:8px;
+  padding: 10px 0 12px;
+  border-top: 1px dashed rgba(255,255,255,0.18);
+  border-bottom: 1px dashed rgba(255,255,255,0.18);
+}
+
+.certLine{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-size:14px;
+}
+
+.certLine span{
+  color: rgba(255,255,255,0.65);
+}
+
+.certFooter{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:10px;
+}
+
+.stamp{
+  padding:8px 12px;
+  border-radius:12px;
+  border: 1px solid rgba(124,255,178,0.30);
+  background: rgba(124,255,178,0.14);
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.smallNote{
+  font-size:12px;
+  color: rgba(255,255,255,0.65);
+  max-width: 380px;
+}
+
