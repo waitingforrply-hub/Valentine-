@@ -216,11 +216,13 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------- Stage 3: Photos ----------
-  const photos = [
-    { src: "https://picsum.photos/id/1062/1200/800", cap: "Exhibit A: You being cute." },
-    { src: "https://picsum.photos/id/1027/1200/800", cap: "Exhibit B: Me pretending I’m cool." },
-    { src: "https://picsum.photos/id/1035/1200/800", cap: "Exhibit C: Us = unstoppable." }
-  ];
+ const photos = [
+  { src: "images/1.jpg", cap: "Exhibit A: Mid way through 💘" },
+  { src: "images/2.jpg", cap: "Exhibit B: Manifestation in background 😮‍💨" },
+  { src: "images/3.jpg", cap: "Exhibit C: You know why I like this 🫶" }
+  { src: "images/4.jpg", cap: "Exhibit D: Where it all started. 🫶" }
+];
+
   let p = 0;
 
   function renderPhoto(){
