@@ -26,11 +26,12 @@ async function typeLines(lines){
 // ---------- Stage 1: Welcome ----------
 const introLines = [
   "Booting Quirky LoveOS…",
-  "Scanning: cutest human detected ✅",
-  "Loading: inside jokes… 99%",
-  "Calibrating: butterflies in stomach…",
-  "Ready to proceed."
+  "Scanning: BooBoo detected 💖",
+  "Loading: reasons I smile when I think of you… 99%",
+  "Calibrating: butterflies in my stomach…",
+  "Ready to steal your heart 😌"
 ];
+
 
 (async () => {
   await typeLines(introLines);
