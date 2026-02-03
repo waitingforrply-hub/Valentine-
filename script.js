@@ -226,11 +226,12 @@ const photos = [
 
   let p = 0;
 
-  function renderPhoto(){
-    if (!photoImg || !caption) return;
-    photoImg.src = photos[p].src;
-    caption.textContent = photos[p].cap;
-  }
+function renderPhoto(){
+  $("photo").src = photos[p].src;
+  $("caption").textContent = photos[p].cap;
+  console.log("PHOTO LOADED:", photos[p].src);
+}
+
 
   if (toPhotosBtn){
     toPhotosBtn.addEventListener("click", () => {
