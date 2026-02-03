@@ -226,20 +226,21 @@ const photos = [
 
   let p = 0;
 
+let p = 0;
+
 function renderPhoto(){
-  $("photo").src = photos[p].src;
-  $("caption").textContent = photos[p].cap;
-}
+  const img = $("photo");
+  const cap = $("caption");
+  if (!img || !cap) return;
 
-
-  // force correct sizing
-  img.style.objectFit = "contain";   // stops zooming
+  img.style.objectFit = "contain";
   img.style.objectPosition = "center";
   img.style.background = "rgba(0,0,0,0.25)";
 
   img.src = photos[p].src;
   cap.textContent = photos[p].cap;
 }
+
 
 
   if (toPhotosBtn){
