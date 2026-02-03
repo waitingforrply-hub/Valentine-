@@ -270,5 +270,9 @@ button{
   object-position: center;
   background: rgba(0, 0, 0, 0.25);
 }
+/* Photo fit fix */
+.photoFrame { height: 420px; }      /* adjust if needed */
+#photo { width: 100%; height: 100%; object-fit: contain; background: rgba(0,0,0,.25); }
+
 
 
