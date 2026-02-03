@@ -277,6 +277,20 @@ button{
 /* Fix photo stage sizing (no scroll) */
 #stage-photos .card { max-height: 90vh; overflow: hidden; }
 #stage-photos #photo { width: 100%; height: 38vh; object-fit: contain; background: rgba(0,0,0,.25); }
+/* === FINAL photo sizing fix (no scroll, no zoom) === */
+.gallery {
+  height: 40vh;              /* controls overall photo area */
+  align-items: center;
+}
+
+#photo {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;       /* no cropping */
+  background: rgba(0,0,0,0.2);
+}
 
 
 
