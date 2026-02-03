@@ -92,74 +92,45 @@ function renderQuestion(){
       score += item.points[i];
       idx++;
       if (idx >= quiz.length){
-        
 
-  // Cute "AI verdict" based on score
-  let verdictTitle = "✅ Compatibility Verified";
-  let verdictBody  = "Official diagnosis: you + me = dangerous levels of cute.";
+  burstConfetti();
 
-  if (score >= 16){
-    verdictTitle = "💍 EXTREME COMPATIBILITY";
-    verdictBody  = "Warning: this relationship may cause addiction, smiling, and permanent butterflies.";
-  } else if (score >= 12){
-    verdictTitle = "💘 HIGH COMPATIBILITY";
-    verdictBody  = "Side effects include: random blushes, missing each other, and uncontrollable ‘aww’ moments.";
-  } else {
-    verdictTitle = "😌 COMPATIBLE ENOUGH";
-    verdictBody  = "The AI says: not perfect… but perfect for me. (That’s the only metric that matters.)";
-  }
+  $("quizTitle").textContent = "💘 Compatibility Approved";
+  $("quizPrompt").textContent =
+    "The AI has completed its analysis and reached a conclusion.";
 
-  $("quizTitle").textContent = verdictTitle;
-  $("quizPrompt").textContent = verdictBody;
+  $("qText").textContent = "Result: 100% certified Valentine material ✅";
 
-  $("qText").textContent = `Love Score: ${score}/20  •  Status: Approved ✅`;
   answers.innerHTML = `
-  <div class="cert">
-    <div class="certTop">
-      <div class="certBadge">💘 Love Certificate</div>
-      <div class="certId">ID: BB-${Math.floor(1000 + Math.random() * 9000)}</div>
+    <div class="cert">
+      <div class="certTop">
+        <div class="certBadge">💘 Love Certificate</div>
+        <div class="certId">ID: LOVE-001</div>
+      </div>
+
+      <div class="certMain">
+        <div class="certLine"><span>Issued To:</span> BooBoo</div>
+        <div class="certLine"><span>Issued By:</span> Your favourite human 😌</div>
+        <div class="certLine"><span>Status:</span> APPROVED ✅</div>
+        <div class="certLine"><span>Valid Until:</span> Forever ♾️</div>
+      </div>
+
+      <div class="certFooter">
+        <div class="stamp">APPROVED</div>
+        <div class="smallNote">
+          Redeemable for hugs, dates, and unlimited “come here” moments.
+        </div>
+      </div>
     </div>
-
-    <div class="certMain">
-      <div class="certLine"><span>Issued To:</span> BooBoo</div>
-      <div class="certLine"><span>Issued By:</span> Your favourite human 😌</div>
-      <div class="certLine"><span>Compatibility:</span> ${score}/20 (Certified ✅)</div>
-      <div class="certLine"><span>Valid Until:</span> Forever ♾️</div>
-    </div>
-
-    <div class="certFooter">
-      <div class="stamp">APPROVED</div>
-      <div class="smallNote">Redeemable for hugs, dates, and unlimited “come here” moments.</div>
-    </div>
-  </div>
-
-  <button class="answer" id="revealBtn">Reveal your reward 🎁</button>
-  <button class="answer" id="bonusBtn">Bonus question 😏</button>
-`;
-
   `;
 
-  // Make Next button available
   $("toPhotosBtn").disabled = false;
   $("toPhotosBtn").textContent = "Next: memories 📸";
-
-  // Button actions
-  setTimeout(() => {
-    const revealBtn = document.getElementById("revealBtn");
-    const bonusBtn = document.getElementById("bonusBtn");
-
-    if (revealBtn) revealBtn.onclick = () => {
-      $("quizPrompt").textContent = "Reward unlocked: unlimited hugs + one date night (redeemable immediately). 🫶";
-    };
-
-    if (bonusBtn) bonusBtn.onclick = () => {
-      $("quizPrompt").textContent = "Bonus answer accepted. Now proceed to the photo evidence. 📸😌";
-    };
-  }, 0);
 
 } else {
   renderQuestion();
 }
+
 
     });
     answers.appendChild(b);
