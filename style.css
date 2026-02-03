@@ -262,4 +262,13 @@ button{
   color: rgba(255,255,255,0.65);
   max-width: 380px;
 }
+/* ---- Photo stage image fix ---- */
+#photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* prevents zoom/cropping */
+  object-position: center;
+  background: rgba(0, 0, 0, 0.25);
+}
+
 
