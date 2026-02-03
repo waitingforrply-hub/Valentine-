@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For You 💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="top">
+        <span class="pill" id="pill">Quirky LoveOS</span>
+        <button class="tiny" id="skipBtn" title="Skip animations">Skip</button>
+      </div>
+
+      <!-- STAGE: WELCOME -->
+      <div class="stage active" id="stage-welcome">
+        <h1 id="welcomeTitle">👋 Hey you</h1>
+        <div class="terminal" id="terminal"></div>
+        <div class="actions">
+          <button class="primary" id="startBtn">Start the mission 💌</button>
+        </div>
+      </div>
+
+      <!-- STAGE: Q&A -->
+      <div class="stage" id="stage-quiz">
+        <h2 id="quizTitle">Quick compatibility check 😌</h2>
+        <p class="muted" id="quizPrompt">Answer honestly. There are no wrong answers… except one 😈</p>
+
+        <div class="qbox">
+          <div class="q" id="qText"></div>
+          <div class="answers" id="answers"></div>
+        </div>
+
+        <div class="actions">
+          <button class="ghost" id="backToWelcomeBtn">← Back</button>
+          <button class="primary" id="toPhotosBtn" disabled>Next: memories 📸</button>
+        </div>
+      </div>
+
+      <!-- STAGE: PHOTOS -->
+      <div class="stage" id="stage-photos">
+        <h2>Memories that make me smile 📸</h2>
+        <p class="muted">Swipe or click. (You can replace these photos with yours.)</p>
+
+        <div class="gallery">
+          <button class="nav" id="prevPhoto">‹</button>
+          <img id="photo" alt="photo" />
+          <button class="nav" id="nextPhoto">›</button>
+        </div>
+        <div class="caption" id="caption"></div>
+
+        <div class="actions">
+          <button class="ghost" id="backToQuizBtn">← Back</button>
+          <button class="primary" id="toFinalBtn">Final question… 😳</button>
+        </div>
+      </div>
+
+      <!-- STAGE: FINAL -->
+      <div class="stage" id="stage-final">
+        <h2 id="finalTitle">Okay… serious question 🥺</h2>
+        <p class="muted">Try to choose wisely.</p>
+
+        <div class="finalBox">
+          <div class="bigQ">Will you be my Valentine? 💘</div>
+
+          <div class="btnRow" id="btnRow">
+            <button class="primary" id="yesBtn">YES 😍</button>
+            <button class="danger" id="noBtn">No 🙃</button>
+          </div>
+
+          <div class="hint" id="hint">Psst… you can’t say no to science.</div>
+        </div>
+      </div>
+
+      <!-- STAGE: END -->
+      <div class="stage" id="stage-end">
+        <h2>YAAAAAAY 💖</h2>
+        <p class="muted" id="endMsg">
+          You just made my day. Now claim your prize: a date + unlimited hugs.
+        </p>
+        <div class="actions">
+          <button class="primary" id="restartBtn">Replay 🔁</button>
+        </div>
+      </div>
+
+      <footer class="foot">Made with love + maximum nonsense.</footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
