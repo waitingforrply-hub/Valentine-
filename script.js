@@ -227,9 +227,10 @@ const photos = [
   let p = 0;
 
 function renderPhoto(){
-  const img = $("photo");
-  const cap = $("caption");
-  if (!img || !cap) return;
+  $("photo").src = photos[p].src;
+  $("caption").textContent = photos[p].cap;
+}
+
 
   // force correct sizing
   img.style.objectFit = "contain";   // stops zooming
